@@ -18,6 +18,9 @@ for (i=0; i < fullGame.length; i++) {
 
         batsmenScore[currentBatsmen] += parseInt(fullGame[i]);
         totalScore += parseInt(fullGame[i]);
+        if (parseInt(fullGame[i])%2 === 1) {
+            [currentBatsmen, secondBatsmen] = [secondBatsmen, currentBatsmen];
+        }
 
     } else if (fullGame[i] === "W") {
         notOut[currentBatsmen] = " "; 
